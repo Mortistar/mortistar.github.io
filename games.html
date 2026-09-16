@@ -21,35 +21,50 @@
         </div>
     </header>
     <div class="content">
-        <h3>Games</h3>
+        <h2>Games</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Ut enim ad minim veniam,
         </p>
         <div class="game_container">
-            <div class="game">
-                <p>game_title year</p>
-                <p>genre</p>
-                <p>engine</p>
+            <div class="game" href="https://www.google.com">
+                <p class="title">game_title year</p>
+                <p class="genre">genre</p>
+                <p class="engine">engine</p>
+                <p class="hover_desc">desc</p>
             </div>
-            <div class="game">
-                <p>game_title year</p>
-                <p>genre</p>
-                <p>engine</p>
+            </a>
+            <div class="game" href="https://www.google.com">
+                <p class="title">game_title year</p>
+                <p class="genre">genre</p>
+                <p class="engine">engine</p>
+                <p class="hover_desc">desc</p>
             </div>
-            <div class="game">
-                <p>game_title year</p>
-                <p>genre</p>
-                <p>engine</p>
+            <div class="game" href="https://www.google.com">
+                <p class="title">game_title year</p>
+                <p class="genre">genre</p>
+                <p class="engine">engine</p>
+                <p class="hover_desc">desc</p>
             </div>
-            <div class="game">
-                <p>game_title year</p>
-                <p>genre</p>
-                <p>engine</p>
+            <div class="game" href="https://www.google.com">
+                <p class="title">game_title year</p>
+                <p class="genre">genre</p>
+                <p class="engine">engine</p>
+                <p class="hover_desc">desc</p>
             </div>
         </div>
     </div>
     <footer>copyright 2026 - mort_dev</footer>
 </body>
+
+<script>
+    document.querySelectorAll(".game_container .game").forEach((x) => 
+    {
+        x.addEventListener("click", () => 
+        { 
+            window.location = x.getAttribute("href");
+        }) 
+    })
+</script>
 
 </html>
