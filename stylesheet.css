@@ -1,4 +1,6 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
     font-family: monospace;
 }
 
@@ -6,6 +8,7 @@ h1 {
     font-size: 5em;
     margin-bottom: 0px;
 }
+
 h2 {
     font-size: 2em;
 }
@@ -15,11 +18,14 @@ h2,
 h3,
 p {
     color: black;
-    
 }
 
 p {
     font-size: 18px;
+}
+
+a {
+    text-decoration: none;
 }
 
 button {
@@ -31,6 +37,10 @@ button {
     font-weight: bold;
     text-decoration: underline;
     text-underline-offset: 2px;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .header {
@@ -127,7 +137,7 @@ footer {
         }
 
         &[href] .hover_desc::before {
-            content: "🔗"
+            content: "🔗 "
         }
     }
 
@@ -238,11 +248,17 @@ footer {
         box-shadow: -5px 5px 16px rgba(87, 86, 87, 0.482);
 
         &:hover {
-            cursor: grab;
-
             .hover_desc {
                 opacity: 100%;
             }
+        }
+
+        &[href]:hover {
+            cursor: pointer;
+        }
+
+        &[href] .hover_desc::before {
+            content: "🔗 "
         }
     }
 
@@ -251,6 +267,17 @@ footer {
     .software {
         margin: 0px;
         position: absolute;
+    }
+
+    .title,
+    .type,
+    .software,
+    .hover_desc {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        padding: 1px 2px;
+        font-size: 16px;
     }
 
     .title {
