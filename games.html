@@ -22,35 +22,63 @@
     </header>
     <div class="content">
         <h2>Games</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam,
+        <p>A collection of games made in various engines.
         </p>
         <div class="game_container">
-            <div class="game" href="https://www.google.com">
-                <p class="title">game_title year</p>
-                <p class="genre">genre</p>
-                <p class="engine">engine</p>
-                <p class="hover_desc">desc</p>
+            <div class="game" href="https://mortistar.itch.io/tower-of-spirits" style="background-image: url(img/tower_of_spirits.png);">
+                <p class="title">tower of spirits 2026</p>
+                <p class="genre">first person adventure</p>
+                <p class="engine">unity</p>
+                <p class="hover_desc">A first-person dungeon crawler made in 4 days for UOPJam26</p>
             </div>
             </a>
-            <div class="game" href="https://www.google.com">
-                <p class="title">game_title year</p>
-                <p class="genre">genre</p>
-                <p class="engine">engine</p>
-                <p class="hover_desc">desc</p>
+            <div class="game" href="https://mortistar.itch.io/dark-legend-shards-of-hope" style="background-image: url(img/dark_legend.png);">
+                <p class="title">dark legend: shards of hope 2025</p>
+                <p class="genre">zeldalike</p>
+                <p class="engine">unity</p>
+                <p class="hover_desc">A top-down pixel zeldalike made in 10 days for GBJam13!</p>
             </div>
-            <div class="game" href="https://www.google.com">
-                <p class="title">game_title year</p>
-                <p class="genre">genre</p>
-                <p class="engine">engine</p>
-                <p class="hover_desc">desc</p>
+            <div class="game" href="https://mortistar.itch.io/videogeist98" style="background-image: url(img/video_geist_98.png);">
+                <p class="title">video geist 98 2024</p>
+                <p class="genre">horror</p>
+                <p class="engine">unity</p>
+                <p class="hover_desc">A short horror game about capturing ghosts on CCTV</p>
             </div>
-            <div class="game" href="https://www.google.com">
-                <p class="title">game_title year</p>
-                <p class="genre">genre</p>
-                <p class="engine">engine</p>
-                <p class="hover_desc">desc</p>
+            <div class="game" href="https://mortistar.itch.io/dragons-gate" style="background-image: url(img/dragons_gate.png);">
+                <p class="title">dragon's gate 2024</p>
+                <p class="genre">turn based tactics</p>
+                <p class="engine">unity</p>
+                <p class="hover_desc">A Turn-Based Dungeon Crawler made in 4 days for UOPJam24</p>
+            </div>
+            <div class="game" href="https://mortistar.itch.io/raigun" style="background-image: url(img/raigun.png);">
+                <p class="title">raigun 2024</p>
+                <p class="genre">shoot em up</p>
+                <p class="engine">unity</p>
+                <p class="hover_desc">A Shoot 'em up originally made for GMTKJam24</p>
+            </div>
+            <div class="game" href="https://mortistar.itch.io/bootleg-dungeon" style="background-image: url(img/bootleg_dungeon.png);">
+                <p class="title">bootleg dungeon 2024</p>
+                <p class="genre">doomlike</p>
+                <p class="engine">unity</p>
+                <p class="hover_desc">A First-Person "Booter" created for GGJ24</p>
+            </div>
+            <div class="game" style="background-image: url(img/sounds_like_rain.png);">
+                <p class="title">sounds like rain 2023</p>
+                <p class="genre">first-person adventure</p>
+                <p class="engine">unreal</p>
+                <p class="hover_desc">A science fiction prototype about crash landing on an alien world</p>
+            </div>
+            <div class="game" href="https://arknano.itch.io/steampunch" style="background-image: url(img/steampunch.png);">
+                <p class="title">steampunch 2022</p>
+                <p class="genre">top-down dungeon crawler</p>
+                <p class="engine">unity</p>
+                <p class="hover_desc">A First-Person "Booter" created for GGJ24</p>
+            </div>
+            <div class="game" href="https://mortistar.itch.io/misted" style="background-image: url(img/misted.png);">
+                <p class="title">misted 2021</p>
+                <p class="genre">first person horror</p>
+                <p class="engine">unity</p>
+                <p class="hover_desc">A short horror game about exploring an abandoned underwater complex.</p>
             </div>
         </div>
     </div>
@@ -60,9 +88,14 @@
 <script>
     document.querySelectorAll(".game_container .game").forEach((x) => 
     {
+        if (x.getAttribute("href") == undefined)
+        {
+            return;
+        }
         x.addEventListener("click", () => 
         { 
-            window.location = x.getAttribute("href");
+            window.open(x.getAttribute("href"),'_blank');
+            // window.location = x.getAttribute("href");
         }) 
     })
 </script>
